@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VéndeloYa - Marketplace actualizado</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+<header>
+  <div class="top-bar">
+    <div class="logo">
+      <img src="icon.png" alt="VéndeloYa logo">
+      <span>VéndeloYa</span>
+    </div>
+    <input type="search" id="searchInput" placeholder="Buscar productos...">
+    <div class="header-right" id="headerRight"></div>
+  </div>
+  <nav class="categories">
+    <ul id="categoryList">
+      <li data-category="Todas" class="active">Todas</li>
+      <li data-category="Electrónica">Electrónica</li>
+      <li data-category="Moda">Moda</li>
+      <li data-category="Hogar">Hogar</li>
+      <li data-category="Deportes">Deportes</li>
+      <li data-category="Ocio">Ocio</li>
+      <li data-category="Motor">Motor</li>
+      <li data-category="Otros">Otros</li>
+      <li><button id="filterToggle" class="secondary-btn">Filtros</button></li>
+      <li><button id="addBtn" class="primary-btn">Subir producto</button></li>
+    </ul>
+  </nav>
+</header>
+<!-- Hero banner section inserted after header -->
+<section id="hero" class="hero">
+  <img src="images/banner.png" alt="Banner promocional">
+</section>
+<!-- Login images section to highlight login options on homepage -->
+<section class="login-start">
+  <h3>Accede rápidamente</h3>
+  <div class="login-images">
+    <img src="images/login_google.png" alt="Login con Google">
+    <img src="images/login_phone.png" alt="Login con teléfono">
+  </div>
+</section>
+<section id="filtersPanel" class="filters-panel hidden">
+  <h3>Filtros</h3>
+  <div class="filter-row">
+    <label>Precio mínimo (€)<br><input type="number" id="minPrice" min="0"></label>
+    <label>Precio máximo (€)<br><input type="number" id="maxPrice" min="0"></label>
+  </div>
+  <div class="filter-row">
+    <label>Radio (km)<br><input type="number" id="radius" min="0" step="1" value="0"></label>
+  </div>
+  <button id="applyFilters" class="primary-btn">Aplicar filtros</button>
+</section>
+<main>
+  <div id="productGrid" class="product-grid"></div>
+</main>
+<!-- Advertisement section at bottom -->
+<section id="adBanner" class="ad-banner">
+  <img src="images/advertisement.png" alt="Anuncio promocional">
+</section>
+<section id="download" class="download">
+  <h3>Descarga la app</h3>
+  <div class="download-buttons">
+    <!-- Assign IDs so the buttons can trigger download actions in script.js -->
+    <a href="#" id="downloadMac" class="download-btn"><i class="fab fa-apple"></i> Mac</a>
+    <a href="#" id="downloadWin" class="download-btn"><i class="fab fa-windows"></i> Windows</a>
+    <a href="#" id="downloadAndroid" class="download-btn"><i class="fab fa-android"></i> Android</a>
+    <a href="#" id="downloadIos" class="download-btn"><i class="fab fa-apple"></i> iOS</a>
+  </div>
+</section>
+<div id="modalOverlay" class="modal-overlay hidden">
+  <div id="modalBox" class="modal-box"></div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
